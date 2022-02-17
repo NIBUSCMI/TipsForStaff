@@ -1,0 +1,45 @@
+//TIP MATH
+let totalCash = 3355;
+    //enter total tips earned
+const barPercent = .08;
+let barTip = totalCash * barPercent
+    // calculates bartender tip out
+    console.log(`Total Tip Count: ${totalCash}`)
+    console.log(`Bartender Tipout: ${totalCash} * ${barPercent} = ${barTip}`)
+
+let miscCut = 00
+const finalCount = totalCash - barTip - miscCut
+    console.log(`Final Tip Count: ${totalCash} - ${barTip} - ${miscCut} = ${finalCount}`)
+    // prints total tips less bartender
+
+let serverName = ['name', 'name', 'name', 'name', 'name', 'name', 'name', 'name']
+let busName = ['name', 'name', 'name', 'name', 'name', 'name', 'name']
+let runName = ['name', 'name']
+    // enter names of employees
+
+let serverNum = serverName.length;
+let busNum = busName.length;
+let runNum = runName.length;
+    // counts number of each type of employeee
+
+const fullCut = 1
+const busCut = .5
+const runCut = .75
+    // percent cut each type fo employee gets
+
+const totalCuts = serverNum*fullCut + busNum*busCut + runNum*runCut
+    console.log(`Total Number of Cuts: ${totalCuts}`)
+    // prints total number of cuts
+
+const Tipout = finalCount / totalCuts
+    console.log(`Server Tipout: ${Tipout*fullCut}
+Busboy Tipout: ${Tipout*busCut}
+Runner Tipout: ${Tipout*runCut}`)
+    // prints cut for each type of employee
+
+
+let busTip = Tipout*busCut
+if (barTip>busTip) {
+    barTip = busTip
+} else {barTip = null}
+console.log(`Bartender Tipout if greater than bus cut: ${barTip}`)
